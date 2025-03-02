@@ -1,1 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Wedding</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #fffaf0;
+            color: #5a3e36;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('images/header-bg.jpg');
+            background-size: cover;
+            color: white;
+            padding: 50px 20px;
+        }
+        h1 {
+            font-size: 3em;
+            font-family: 'Dancing Script', cursive;
+        }
+        .button {
+            background-color: #d4a373;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        section {
+            padding: 50px;
+        }
+        footer {
+            background-color: #5a3e36;
+            color: white;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Wedding</h1>
+        <p>Join us as we celebrate our love</p>
+        <div id="countdown"></div>
+    </header>
+
+    <section id="story">
+        <h2>Our Love Story</h2>
+        <p>How we met, our journey, and the beautiful proposal...</p>
+    </section>
+
+    <section id="events">
+        <h2>Wedding Events</h2>
+        <p>Details of Haldi, Sangeet, Wedding, and Reception...</p>
+    </section>
+
+    <section id="rsvp">
+        <h2>RSVP</h2>
+        <p>Please confirm your attendance</p>
+        <a href="rsvp-form/index.html" class="button">RSVP Now</a>
+    </section>
+
+    <footer>
+        <p>With Love, [Your Names]</p>
+    </footer>
+    
+    <script>
+        function countdown() {
+            const weddingDate = new Date("2025-04-18T00:00:00").getTime();
+            const timer = setInterval(() => {
+                const now = new Date().getTime();
+                const timeLeft = weddingDate - now;
+                if (timeLeft < 0) {
+                    document.getElementById("countdown").innerHTML = "Today is the big day!";
+                    clearInterval(timer);
+                    return;
+                }
+                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                document.getElementById("countdown").innerHTML = `${days} days to go!`;
+            }, 1000);
+        }
+        window.onload = countdown;
+    </script>
+</body>
+</html>
 
