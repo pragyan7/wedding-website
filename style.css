@@ -24,6 +24,18 @@
             font-size: 3em;
             font-family: 'Dancing Script', cursive;
         }
+        h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 4rem; /* Increase the size */
+            font-weight: 400; /* Keep it elegant */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Soft shadow for readability */
+        }
+        header {
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6));
+            padding: 60px 20px;
+        }
+        
+
         .button {
             background-color: #d4a373;
             color: white;
