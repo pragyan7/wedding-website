@@ -11,9 +11,38 @@ document.addEventListener("DOMContentLoaded", function () {
                 return;
             }
             const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-            document.getElementById("countdown").innerHTML = `${days} days to go!`;
+            document.getElementById("countdown").innerHTML = `Only ${days} days until forever begins!`;
         }, 1000);
     }
+
+// document.addEventListener("DOMContentLoaded", function () {
+//     function countdown() {
+//       const weddingDateObj = new Date("2025-03-09T00:00:00");
+//       const timer = setInterval(() => {
+//         const now = new Date();
+        
+//         // Check if wedding day is over
+//         if (now < weddingDateObj) {
+//           clearInterval(timer);
+//           document.getElementById("countdown").style.display = "none";
+//           return;
+//         }
+        
+//         // Check if today is the wedding day
+//         if (now.toDateString() === weddingDateObj.toDateString()) {
+//           document.getElementById("countdown").innerHTML = "Today is the big day!";
+//         } else {
+//           // Before wedding day: show days left
+//           const timeLeft = weddingDateObj.getTime() - now.getTime();
+//           const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+//           document.getElementById("countdown").innerHTML = `${days} days to go!`;
+//         }
+//       }, 1000);
+//     }
+//     countdown();
+//   });
+  
+      
 
     // Smooth Scrolling
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {

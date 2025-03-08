@@ -1,114 +1,97 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Wedding</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            font-family: 'Arial', serif;
-            background-color: #fffaf0;
-            color: #5a3e36;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('images/header-bg.jpg');
-            background-size: cover;
-            color: white;
-            padding: 50px 20px;
-        }
-        h1 {
-            font-size: 3em;
-            font-family: 'Dancing Script', cursive;
-        }
-        h1 {
-            font-family: 'Great Vibes', cursive;
-            font-size: 4rem; /* Increase the size */
-            font-weight: 400; /* Keep it elegant */
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Soft shadow for readability */
-        }
-        header {
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6));
-            padding: 60px 20px;
-        }
-        .weddingCarousel {
-            background-color: white; /* Change to match the rest of the page */
-            color: #333; /* Dark gray for contrast */
-        }
-        
-        .countdown {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #b8860b; /* Muted gold for elegance or #d4af37;*/
-            margin-bottom: 30px; /* More spacing */
-        }
 
-        .button {
-            background-color: #d4a373;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            display: inline-block;
-            margin-top: 10px;
-        }
-        section {
-            padding: 50px;
-        }
-        footer {
-            background-color: #5a3e36;
-            color: white;
-            padding: 20px;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>Welcome to Our Wedding</h1>
-        <p>Join us as we celebrate our love</p>
-        <div id="countdown"></div>
-    </header>
+body {
+    font-family: 'Quicksand', serif;
+    background-color: #fffaf0;
+    color: #5a3e36;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+/* header {
+    background: url('images/photo1.jpg');
+    background-size: cover;
+    color: white;
+    padding: 50px 20px;
+} */
+/* h1 {
+    font-size: 3em;
+    font-family: 'Dancing Script', cursive;
+} */
+.display-3 {
+    font-family: 'Quicksand';
+    color: #5a3e36;
+    font-size: 1.5rem; /* Increase the size */
+    font-weight: 100; /* Keep it elegant */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Soft shadow for readability */
+}
+.lead mt-3 {
+    font-family: 'Quicksand';
+    color: #5a3e36;
+    font-size: 3rem !important; /* Increase the size */
+    font-weight: 400; /* Keep it elegant */
+}
 
-    <section id="story">
-        <h2>Our Love Story</h2>
-        <p>How we met, our journey, and the beautiful proposal...</p>
-    </section>
+.fs-4 fw-bold text-warning {
+    font-family: 'Quicksand';
+    color: #5a3e36 !important;
+    font-size: 3rem; /* Increase the size */
+    font-weight: 100; /* Keep it elegant */
+}
+p {
+    font-family: 'Quicksand';
+    color: #040100;
+    /* font-size: 4rem; Increase the size */
+    /* font-weight: 200; /*Keep it elegant */
+    /* text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); Soft shadow for readability */
+}
 
-    <section id="events">
-        <h2>Wedding Events</h2>
-        <p>Details of Haldi, Mehendi, Wedding, and Reception...</p>
-    </section>
+header {
+    background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(255, 252, 244));
+    padding: 60px 20px;
+}
+.weddingCarousel {
+    background-color: white; /* Change to match the rest of the page */
+    color: #333; /* Dark gray for contrast */
+}
 
-    <section id="rsvp">
-        <h2>RSVP</h2>
-        <p>Please confirm your attendance</p>
-        <a href="rsvp-form/index.html" class="button">RSVP Now</a>
-    </section>
+.countdown {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #4811c9;
+    margin-bottom: 30px; /* More spacing */
+}
+.rsvp {
+    /* background-color: #5d4632 !important; /* Same color as your heading text */
+    /* color: #ffffff;            White text */ 
+    border: none;
+    border-radius: 4px;
+    /* border-color: #5d4632; */
+    padding: 10px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
 
-    <footer>
-        <p>With Love, [Your Names]</p>
-    </footer>
-    
-    <script>
-        function countdown() {
-            const weddingDate = new Date("2025-04-18T00:00:00").getTime();
-            const timer = setInterval(() => {
-                const now = new Date().getTime();
-                const timeLeft = weddingDate - now;
-                if (timeLeft < 0) {
-                    document.getElementById("countdown").innerHTML = "Today is the big day!";
-                    clearInterval(timer);
-                    return;
-                }
-                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-                document.getElementById("countdown").innerHTML = `${days} days to go!`;
-            }, 1000);
-        }
-        window.onload = countdown;
-    </script>
-</body>
-</html>
-
+/* .button {
+    background-color: #d4a373;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+} */
+section {
+    padding: 50px;
+}
+footer {
+    background-color: #5a3e36;
+    color: white;
+    padding: 20px;
+}
+.footer-text {
+    /* background-color: #5a3e36; */
+    color: white;
+    padding: 20px 0;
+    font-size: 1.25rem;
+}
