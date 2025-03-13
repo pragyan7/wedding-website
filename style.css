@@ -2,7 +2,7 @@
 body {
     font-family: 'Quicksand', serif;
     background-color: #fffaf0;
-    color: #5a3e36;
+    color: #64092f;
     text-align: center;
     margin: 0;
     padding: 0;
@@ -19,22 +19,23 @@ body {
 } */
 .display-3 {
     font-family: 'Quicksand';
-    color: #5a3e36;
+    color: #64092f;
     font-size: 1.5rem; /* Increase the size */
     font-weight: 100; /* Keep it elegant */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Soft shadow for readability */
+    /* text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); Soft shadow for readability */
 }
-.lead mt-3 {
-    font-family: 'Quicksand';
-    color: #5a3e36;
-    font-size: 3rem !important; /* Increase the size */
-    font-weight: 400; /* Keep it elegant */
+.lead-mt-3 {
+    font-family: 'Quicksand' !important;
+    color: #64092f;
+    font-size: 3rem; /* Increase the size */
+    font-weight: 500; /* Keep it elegant */
+    /* text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); Soft shadow for readability */
 }
 
-.fs-4 fw-bold text-warning {
+.fs-4-fw-bold-text-warning {
     font-family: 'Quicksand';
-    color: #5a3e36 !important;
-    font-size: 3rem; /* Increase the size */
+    color: #64092f;
+    font-size: 2rem; /* Increase the size */
     font-weight: 100; /* Keep it elegant */
 }
 p {
@@ -85,13 +86,14 @@ section {
     padding: 50px;
 }
 footer {
-    background-color: #5a3e36;
+    background-color: #64092f;
     color: white;
     padding: 20px;
 }
 .footer-text {
-    /* background-color: #5a3e36; */
+    /* background-color: #64092f; */
     color: white;
-    padding: 20px 0;
+    padding: 10px 0;
     font-size: 1.25rem;
 }
+  
