@@ -17,6 +17,14 @@ body {
     font-size: 3em;
     font-family: 'Dancing Script', cursive;
 } */
+
+.fs-5 {
+    max-width: 900px;     /* limit how wide the text can get */
+    margin: 0 auto;       /* center the container horizontally */
+    padding: 1rem;        /* optional padding around text */
+    text-align: center;     /* keep text left-aligned for readability */
+    line-height: 1.5;     /* better spacing between lines */
+}
 .display-3 {
     font-family: 'Quicksand';
     color: #64092f;
