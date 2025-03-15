@@ -3,17 +3,25 @@ document.addEventListener("DOMContentLoaded", function () {
     function countdown() {
         const weddingDate = new Date("2025-04-18T00:00:00").getTime();
         const timer = setInterval(() => {
-            const now = new Date().getTime();
-            const timeLeft = weddingDate - now;
-            if (timeLeft < 0) {
-                document.getElementById("countdown").innerHTML = "Today is the big day!";
-                clearInterval(timer);
-                return;
-            }
+          const now = new Date().getTime();
+          const timeLeft = weddingDate - now;
+          
+          // Still counting down
+          if (timeLeft > 0) {
             const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
             document.getElementById("countdown").innerHTML = `Only ${days} days until forever begins!`;
+          } 
+          // Wedding day (within 24 hours after the wedding start)
+          else if (timeLeft > -86400000) { // 86400000ms = 24 hours
+            document.getElementById("countdown").innerHTML = "Today is the big day!";
+          } 
+          // After wedding day
+          else {
+            document.getElementById("countdown").innerHTML = "Forever has begun";
+            clearInterval(timer);
+          }
         }, 1000);
-    }
+      }
 
 // document.addEventListener("DOMContentLoaded", function () {
 //     function countdown() {
