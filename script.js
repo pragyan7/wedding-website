@@ -74,5 +74,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Initialize Countdown
     countdown();
-});
 
+    document.querySelectorAll('.img-fluid').forEach(img => {
+        img.addEventListener('click', function() {
+          const modalImage = document.getElementById('modalImage');
+          // Set the modal image source to the clicked image source
+          modalImage.src = this.src;
+          // Create and show the modal
+          const modal = new bootstrap.Modal(document.getElementById('imageModal'));
+          modal.show();
+        });
+    });
+});
