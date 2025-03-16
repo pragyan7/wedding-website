@@ -93,4 +93,8 @@ document.addEventListener("DOMContentLoaded", function () {
           modal.show();
         });
     });
+
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+      });
 });
