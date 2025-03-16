@@ -118,3 +118,11 @@ footer {
     object-fit: cover;
     cursor: pointer;
   }
+
+.dropdown-menu {
+    --bs-dropdown-link-hover-bg: #eccdda;   /* Hover background color */
+    --bs-dropdown-link-hover-color: #000000;  /* Hover text color */
+    --bs-dropdown-link-active-bg: #64092f;  /* Active background color (when clicked) */
+    --bs-dropdown-link-active-color: #fff; /* Active text color */
+  }
+  
